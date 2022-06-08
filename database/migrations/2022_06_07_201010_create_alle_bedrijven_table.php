@@ -31,8 +31,9 @@ class CreateAlleBedrijvenTable extends Migration
             $table->string('woz_number');
             $table->string('woz_usage');
             $table->string('woz_size_normalized');
-            $table->string('longitude');
-            $table->string('latitude');
+            $table->double('longitude');
+            $table->double('latitude');
+            $table->string('status');
         });
     }
 
