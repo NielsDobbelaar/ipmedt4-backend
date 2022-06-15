@@ -19,3 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/bedrijven', [\App\Http\Controllers\BedrijvenController::class, 'index']);
+
+Route::post('/irrelevant', [\App\Http\Controllers\BedrijvenController::class, 'store']);
+Route::put('/planLijst', [\App\Http\Controllers\BedrijvenController::class, 'update']);
