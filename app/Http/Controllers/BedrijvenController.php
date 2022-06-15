@@ -13,7 +13,12 @@ class BedrijvenController extends Controller
 {
     public function index()
     {
-        return(Bedrijven::All());
+        try{
+            return Bedrijven::All();
+
+        }catch(Exception $e){
+            error_log($e);
+        }
     }
 
     public function store(Request $request)
