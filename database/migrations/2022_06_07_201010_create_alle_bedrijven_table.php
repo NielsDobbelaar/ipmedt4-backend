@@ -14,7 +14,7 @@ class CreateAlleBedrijvenTable extends Migration
     public function up()
     {
         Schema::create('alle_bedrijven', function (Blueprint $table) {
-            $table->integer('id');
+            $table->integer('id')->unique();
             $table->string('mil_locationname');
             $table->string('mil_type');
             $table->string('mil_activity');
